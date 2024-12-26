@@ -2,7 +2,29 @@ import React, { useState } from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-gray-400 py-8">
+    <footer className="text-white p-4 flex justify-between items-center shadow-lg relative"
+    style={{
+      background: "linear-gradient(-45deg, #6a5acd, #4b0082, #00ced1, #1e90ff, #9370db)",
+      backgroundSize: "300% 300%",
+      animation: "gradient-wave 10s ease infinite",
+    }}
+  >
+    <style>
+      {`
+        @keyframes gradient-wave {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}
+    </style>
+
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
@@ -39,7 +61,7 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mt-6 mb-4">Customer Support</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-blue-400">Contact Us</a>
+                <a href="/contact" className="hover:text-blue-400">Contact Us</a>
               </li>
             </ul>
           </div>

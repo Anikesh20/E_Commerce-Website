@@ -3,7 +3,6 @@ import Header from './Header';
 import Section from './Section';
 import Footer from './Footer';
 
-// Importing images from assets folder
 import FictionImg from '../assests/fiction.png';
 import NonFictionImg from '../assests/nonfiction.png';
 import MysteryImg from '../assests/mystery.png';
