@@ -4,7 +4,7 @@ import Section from './Section';
 import Footer from './Footer';
 
 import FictionImg from '../assests/fiction.webp';
-import NonFictionImg from '../assests/nonfiction.webp';
+import NonFictionImg from '../assests/nonfiction.jpg';
 import MysteryImg from '../assests/mystery.jpg';
 import RomanceImg from '../assests/romance.jpg';
 import SciFiImg from '../assests/scifi.jpg';
