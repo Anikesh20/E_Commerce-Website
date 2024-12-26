@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header
-      className="text-white p-4 flex justify-between items-center shadow-lg relative"
+      className="text-white p-4 flex justify-between items-center shadow-lg relative rounded-bl-lg rounded-br-lg"
       style={{
         background: "linear-gradient(-45deg, #6a5acd, #4b0082, #00ced1, #1e90ff, #9370db)",
         backgroundSize: "300% 300%",

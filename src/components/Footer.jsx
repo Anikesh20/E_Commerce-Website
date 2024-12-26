@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Footer = () => {
   return (
-    <footer className="text-white p-4 flex justify-between items-center shadow-lg relative"
+    <footer className="text-white p-4 flex justify-between items-center shadow-lg relative rounded-tl-lg rounded-tr-lg"
     style={{
       background: "linear-gradient(-45deg, #6a5acd, #4b0082, #00ced1, #1e90ff, #9370db)",
       backgroundSize: "300% 300%",
