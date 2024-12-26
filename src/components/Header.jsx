@@ -73,6 +73,7 @@ const Header = () => {
           <ul className="flex flex-col p-4 space-y-2">
             <li>
               <Link to="/" className="block hover:underline">Home</Link>
+              <Link to="/admin" className="hover:underline">Admin Panel</Link>
             </li>
             <li>
               <button
@@ -92,7 +93,6 @@ const Header = () => {
               )}
             </li>
             <li>
-              {/* Corrected path for Contact Us link */}
               <Link to="/contact" className="block hover:underline">Contact Us</Link>
             </li>
           </ul>
