@@ -3,14 +3,14 @@ import Header from './Header';
 import Section from './Section';
 import Footer from './Footer';
 
-import FictionImg from '../assests/fiction.png';
-import NonFictionImg from '../assests/nonfiction.png';
-import MysteryImg from '../assests/mystery.png';
-import RomanceImg from '../assests/romance.png';
-import SciFiImg from '../assests/scifi.png';
-import FantasyImg from '../assests/fantasy.png';
-import BiographyImg from '../assests/biography.png';
-import HistoryImg from '../assests/history.png';
+import FictionImg from '../assests/fiction.webp';
+import NonFictionImg from '../assests/nonfiction.webp';
+import MysteryImg from '../assests/mystery.jpg';
+import RomanceImg from '../assests/romance.jpg';
+import SciFiImg from '../assests/scifi.jpg';
+import FantasyImg from '../assests/fantasy.jpg';
+import BiographyImg from '../assests/biography.jpg';
+import HistoryImg from '../assests/history.jpg';
 import SelfHelpImg from '../assests/selfhelp.png';
 import ChildrensImg from '../assests/childrens.png';
 
