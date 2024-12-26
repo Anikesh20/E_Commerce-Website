@@ -11,8 +11,8 @@ import SciFiImg from '../assests/scifi.jpg';
 import FantasyImg from '../assests/fantasy.jpg';
 import BiographyImg from '../assests/biography.jpg';
 import HistoryImg from '../assests/history.jpg';
-import SelfHelpImg from '../assests/selfhelp.png';
-import ChildrensImg from '../assests/childrens.png';
+import SelfHelpImg from '../assests/selfhelp.jpg';
+import ChildrensImg from '../assests/childrens.jpg';
 
 const HomePage = () => {
   const categories = [
