@@ -6,7 +6,7 @@ const Section = ({ category, image }) => {
     .fill(null)
     .map((_, index) => ({
       title: `${category} Book ${index + 1}`,
-      description: `This is a description for ${category} Book ${index + 1}. It provides an overview of the book's content, such as its themes, plot, and characters. A must-read for fans of ${category}.`,
+      description: `This is a description for ${category} Book ${index + 1}. `,
       img: image,
     }));
 
