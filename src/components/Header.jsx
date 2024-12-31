@@ -48,19 +48,30 @@ const Header = () => {
       <nav className="hidden md:flex space-x-6">
         <Link to="/" className="hover:underline">Home</Link>
         <Link to="/admin" className="hover:underline">Admin Panel</Link>
-        <div className="relative group">
-          <button className="hover:underline cursor-pointer">Categories</button>
-          <ul className="absolute left-0 top-full bg-white text-black shadow-md rounded-md w-48 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-            {categories.map((category) => (
-              <li key={category} className="px-4 py-2 hover:bg-purple-100 cursor-pointer">
-                <Link to={`#${category.toLowerCase().replace(' ', '-')}`}>{category}</Link>
-              </li>
-            ))}
-          </ul>
+
+        <div className="relative">
+          <button
+            className="hover:underline cursor-pointer"
+            onClick={() => setShowCategories((prev) => !prev)} 
+          >
+            Categories
+          </button>
+          {showCategories && (
+            <ul className="absolute left-0 top-full bg-white text-black shadow-md rounded-md w-48 py-2 z-10">
+              {categories.map((category) => (
+                <li key={category} className="px-4 py-2 hover:bg-purple-100 cursor-pointer">
+                  <Link to={`#${category.toLowerCase().replace(' ', '-')}`}>{category}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
+
         <Link to="/contact" className="hover:underline">Contact Us</Link>
+        <Link to="/cart" className="hover:underline">Cart</Link>
       </nav>
 
+      {/* Mobile menu button */}
       <button
         className="md:hidden text-white"
         onClick={() => setShowMenu(!showMenu)}
@@ -68,6 +79,7 @@ const Header = () => {
         {showMenu ? <FaTimes size={30} /> : <FaBars size={30} />}
       </button>
 
+      {/* Mobile menu */}
       {showMenu && (
         <div className="absolute top-16 left-0 w-full bg-white text-blue-600 shadow-md z-50">
           <ul className="flex flex-col p-4 space-y-2">
@@ -78,7 +90,7 @@ const Header = () => {
             <li>
               <button
                 className="w-full text-left hover:underline"
-                onClick={() => setShowCategories((prev) => !prev)}
+                onClick={() => setShowCategories((prev) => !prev)} 
               >
                 Categories
               </button>
@@ -94,6 +106,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/contact" className="block hover:underline">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/cart" className="block hover:underline">Cart</Link>
             </li>
           </ul>
         </div>

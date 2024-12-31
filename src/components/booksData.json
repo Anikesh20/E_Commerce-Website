@@ -1,103 +1,135 @@
 {
     "fiction": [
       {
+        "id": 1,
         "title": "Fiction Book 1",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 2,
         "title": "Fiction Book 2",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 3,
         "title": "Fiction Book 3",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 4,
         "title": "Fiction Book 4",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 5,
         "title": "Fiction Book 5",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 6,
         "title": "Fiction Book 6",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 7,
         "title": "Fiction Book 7",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 8,
         "title": "Fiction Book 8",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 9,
         "title": "Fiction Book 9",
         "description": "This is a description for Fiction Book 1.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       },
       {
+        "id": 10,
         "title": "Fiction Book 10",
         "description": "This is a description for Fiction Book 2.",
-        "img": "/images/fiction/book1.webp"
+        "img": "/images/fiction/book1.webp",
+        "price": 15.99
       }
     ],
     "nonfiction": [
       {
+        "id": 11,
         "title": "Non-fiction Book 1",
         "description": "This is a description for Non-fiction Book 1.",
-        "img": "/images/nonfiction/book1.jpg"
+        "img": "/images/nonfiction/book1.jpg",
+        "price": 15.99
       },
       {
+        "id": 12,
         "title": "Non-fiction Book 2",
         "description": "This is a description for Non-fiction Book 2.",
-        "img": "/images/nonfiction/book2.jpg"
+        "img": "/images/nonfiction/book2.jpg",
+        "price": 15.99
       },
       {
+        "id": 13,
         "title": "Non-fiction Book 3",
         "description": "This is a description for Non-fiction Book 1.",
-        "img": "/images/nonfiction/book1.jpg"
+        "img": "/images/nonfiction/book1.jpg",
+        "price": 15.99
       },
       {
+        "id": 14,
         "title": "Non-fiction Book 4",
         "description": "This is a description for Non-fiction Book 2.",
-        "img": "/images/nonfiction/book2.jpg"
+        "img": "/images/nonfiction/book2.jpg",
+        "price": 15.99
       },
       {
+        "id": 15,
         "title": "Non-fiction Book 5",
         "description": "This is a description for Non-fiction Book 1.",
         "img": "/images/nonfiction/book1.jpg"
       },
       {
+        "id": 16,
         "title": "Non-fiction Book 6",
         "description": "This is a description for Non-fiction Book 2.",
         "img": "/images/nonfiction/book2.jpg"
       },
       {
+        "id": 17,
         "title": "Non-fiction Book 7",
         "description": "This is a description for Non-fiction Book 1.",
         "img": "/images/nonfiction/book1.jpg"
       },
       {
+        "id": 18,
         "title": "Non-fiction Book 8",
         "description": "This is a description for Non-fiction Book 2.",
         "img": "/images/nonfiction/book2.jpg"
       },
-      {
+      {"id": 19,
         "title": "Non-fiction Book 9",
         "description": "This is a description for Non-fiction Book 1.",
         "img": "/images/nonfiction/book1.jpg"
       },
-      {
+      {"id": 20,
         "title": "Non-fiction Book 10",
         "description": "This is a description for Non-fiction Book 2.",
         "img": "/images/nonfiction/book2.jpg"
@@ -105,52 +137,52 @@
     ],
 
   "mystery": [
-      {
+      {"id": 21,
         "title": "Mystery Book 1",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 22,
         "title": "Mystery Book 2",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 23,
         "title": "Mystery Book 3",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 24,
         "title": "Mystery Book 4",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 25,
         "title": "Mystery Book 5",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 26,
         "title": "Mystery Book 6",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 27,
         "title": "Mystery Book 7",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 28,
         "title": "Mystery Book 8",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 29,
         "title": "Mystery Book 9",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
       },
-      {
+      {"id": 30,
         "title": "Mystery Book 10",
         "description": "This is a description for mystery Book 1.",
         "img": "/images/mystery/book1.webp"
@@ -160,52 +192,52 @@
     ],
 
   "romance": [
-      {
+      {"id": 31,
         "title": "Romance Book 1",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 32,
         "title": "Romance Book 2",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 33,
         "title": "Romance Book 3",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 34,
         "title": "Romance Book 4",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 35,
         "title": "Romance Book 5",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 36,
         "title": "Romance Book 6",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 37,
         "title": "Romance Book 7",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 38,
         "title": "Romance Book 8",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 39,
         "title": "Romance Book 9",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
       },
-      {
+      {"id": 40,
         "title": "Romance Book 10",
         "description": "This is a description for Romance Book 1.",
         "img": "/images/romance/book1.webp"
@@ -213,52 +245,52 @@
     ],
 
     "Sci-fi": [
-        {
+        {"id": 41,
           "title": "Science Ficion Book 1",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 42,
           "title": "Science Ficion Book 2",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 43,
           "title": "Science Ficion Book 3",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 44,
           "title": "Science Ficion Book 4",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 45,
           "title": "Science Ficion Book 5",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 46,
           "title": "Science Ficion Book 6",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 47,
           "title": "Science Ficion Book 7",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 48,
           "title": "Science Ficion Book 8",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 49,
           "title": "Science Ficion Book 9",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"
         },
-        {
+        {"id": 50,
           "title": "Science Ficion Book 10",
           "description": "This is a description for Science Ficion Book 1.",
           "img": "/images/scifi/book1.webp"

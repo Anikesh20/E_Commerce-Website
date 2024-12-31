@@ -1,24 +1,41 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AdminPage from './components/AdminPage';
-import AdminDashboard from './components/AdminDashboard';
-import HomePage from './components/HomePage';
-import CategoryPage from './components/CategoryPage'; 
-import Contact from './components/Contact';
-import NotFound from './components/NotFound';
+// App.js
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+
+const HomePage = React.lazy(() => import('./components/HomePage'));
+const CategoryPage = React.lazy(() => import('./components/CategoryPage'));
+const AdminPage = React.lazy(() => import('./components/AdminPage'));
+const AdminDashboard = React.lazy(() => import('./components/AdminDashboard'));
+const Contact = React.lazy(() => import('./components/Contact'));
+const NotFound = React.lazy(() => import('./components/NotFound'));
+const CartPage = React.lazy(() => import('./components/CartPage'));
 
 const App = () => {
+  const isAuthenticated = true; 
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/category/:category" element={<CategoryPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/category/:category" element={<CategoryPage />} />
+            <Route
+              path="/admin"
+              element={isAuthenticated ? <AdminPage /> : <Navigate to="/" />}
+            />
+            <Route
+              path="/admin-dashboard"
+              element={isAuthenticated ? <AdminDashboard /> : <Navigate to="/" />}
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<CartPage />} /> 
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </CartProvider>
   );
 };
 
