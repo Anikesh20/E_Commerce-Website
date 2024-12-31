@@ -10,6 +10,10 @@ const Contact = () => {
     message: '',
   });
 
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -18,25 +22,37 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setSuccessMessage('');
+    setErrorMessage('');
 
-    const existingMessages = JSON.parse(localStorage.getItem('messages')) || [];
+    try {
+      const response = await fetch('http://localhost:5000/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const updatedMessages = [...existingMessages, formData];
+      if (!response.ok) {
+        throw new Error('Failed to submit message.');
+      }
 
-    localStorage.setItem('messages', JSON.stringify(updatedMessages));
-
-    
-    alert('Message submitted successfully!');
-
- 
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    });
+      setSuccessMessage('Message submitted successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+    } catch (error) {
+      setErrorMessage(error.message || 'An error occurred while submitting your message.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -111,11 +127,20 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full px-6 py-2 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300"
+                disabled={loading}
               >
-                Submit
+                {loading ? 'Submitting...' : 'Submit'}
               </button>
             </div>
           </form>
+
+          {/* Success and Error Messages */}
+          {successMessage && (
+            <p className="text-center text-green-500 mt-4">{successMessage}</p>
+          )}
+          {errorMessage && (
+            <p className="text-center text-red-500 mt-4">{errorMessage}</p>
+          )}
         </div>
       </main>
 

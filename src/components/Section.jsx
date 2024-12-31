@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-const Section = ({ category, image }) => {
-  const books = Array(10)
-    .fill(null)
-    .map((_, index) => ({
-      title: `${category} Book ${index + 1}`,
-      description: `This is a description for ${category} Book ${index + 1}. `,
-      img: image,
-    }));
+const Section = ({ category, books }) => {
+  const navigate = useNavigate();
 
-  const visibleBooks = window.innerWidth >= 768 ? 3 : 1;
+  const visibleBooks = window.innerWidth >= 768 ? 3 : 1; 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoveredBookIndex, setHoveredBookIndex] = useState(null);
 
@@ -27,8 +22,13 @@ const Section = ({ category, image }) => {
   };
 
   return (
-    <section className="relative p-8 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 overflow-hidden">
-      <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800">{category}</h2>
+    <section className="relative p-8 bg-gradient-to-r from-purple-500 via-blue-300 to-blue-100 overflow-hidden rounded-full shadow-inner">
+      <h2
+        className="text-3xl font-semibold mb-6 text-center text-gray-800 cursor-pointer hover:underline"
+        onClick={() => navigate(`/category/${category}`)}
+      >
+        {category}
+      </h2>
       <div className="flex items-center justify-center space-x-4">
         <button
           className="p-2 bg-gray-300 rounded-full hover:bg-gray-400"
@@ -45,7 +45,7 @@ const Section = ({ category, image }) => {
             {books.map((book, index) => (
               <div
                 key={index}
-                className={`flex-shrink-0 w-${visibleBooks}/12 p-4 text-center relative group`}
+                className={`flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4 text-center relative group`}
                 onMouseEnter={() => setHoveredBookIndex(index)}
                 onMouseLeave={() => setHoveredBookIndex(null)}
               >
@@ -61,11 +61,11 @@ const Section = ({ category, image }) => {
                     <h3 className="text-lg font-medium">{book.title}</h3>
                     <p className="mt-2 text-sm">{book.description}</p>
                     <button
-  onClick={() => addToCart(book.title)}
-  className="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-900 text-white rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-300 relative z-10"
->
-  Add to Cart
-</button>
+                      onClick={() => addToCart(book.title)}
+                      className="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-900 text-white rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-300 relative z-10"
+                    >
+                      Add to Cart
+                    </button>
                   </div>
                 )}
               </div>
