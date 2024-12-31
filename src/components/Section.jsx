@@ -55,7 +55,7 @@ const Section = ({ category, books }) => {
                   <div className="absolute inset-0 bg-black bg-opacity-70 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10 rounded-3xl">
                     <h3 className="text-lg font-medium">{book.title}</h3>
                     <p className="mt-2 text-sm">{book.description}</p>
-                    <p className="mt-2 text-xl font-bold">₹{book.price}</p>
+                    <p className="mt-2 text-xl font-bold">Rs. {book.price}</p>
                   </div>
                 </div>
 

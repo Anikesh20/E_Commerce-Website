@@ -20,15 +20,15 @@ const HomePage = () => {
 
   const categories = [
     { name: "Fiction", img: FictionImg },
-    { name: "Non-fiction", img: NonFictionImg },
+    { name: "nonfiction", img: NonFictionImg },
     { name: "Mystery", img: MysteryImg },
     { name: "Romance", img: RomanceImg },
-    { name: "Science Fiction", img: SciFiImg },
+    { name: "Scifi", img: SciFiImg },
     { name: "Fantasy", img: FantasyImg },
     { name: "Biography", img: BiographyImg },
     { name: "History", img: HistoryImg },
-    { name: "Self-Help", img: SelfHelpImg },
-    { name: "Children's Books", img: ChildrensImg },
+    { name: "Selfhelp", img: SelfHelpImg },
+    { name: "Childrens", img: ChildrensImg },
   ];
 
   const handleCategoryClick = (category) => {
