@@ -46,7 +46,7 @@ const HomePage = () => {
         }}
         className="flex-grow relative"
       >
-        {/* Transparent Overlay */}
+       
         <div
           style={{
             position: 'absolute',

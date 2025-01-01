@@ -74,58 +74,58 @@
     "nonfiction": [
       {
         "id": 11,
-        "title": "Non fiction Book 1",
+        "title": "The Lives Inside your Head",
         "description": "This is a description for Non-fiction Book 1.",
-        "img": "/images/nonfiction/book1.jpg",
+        "img": "/images/nonfiction/book1.png",
         "price": 15.99
       },
       {
         "id": 12,
-        "title": "Non-fiction Book 2",
+        "title": "World Building",
         "description": "This is a description for Non-fiction Book 2.",
         "img": "/images/nonfiction/book2.jpg",
         "price": 15.99
       },
       {
         "id": 13,
-        "title": "Non-fiction Book 3",
+        "title": "A Living Remedy",
         "description": "This is a description for Non-fiction Book 1.",
-        "img": "/images/nonfiction/book1.jpg",
+        "img": "/images/nonfiction/book3.jpg",
         "price": 15.99
       },
       {
         "id": 14,
-        "title": "Non-fiction Book 4",
+        "title": "The Rebirth of You",
         "description": "This is a description for Non-fiction Book 2.",
-        "img": "/images/nonfiction/book2.jpg",
+        "img": "/images/nonfiction/book4.jpg",
         "price": 15.99
       },
       {
         "id": 15,
-        "title": "Non-fiction Book 5",
+        "title": "The Wonders of the Heart",
         "description": "This is a description for Non-fiction Book 1.",
-        "img": "/images/nonfiction/book1.jpg",
+        "img": "/images/nonfiction/book5.jpg",
         "price": 15.99
       },
       {
         "id": 16,
-        "title": "Non-fiction Book 6",
+        "title": "Fight or Flight",
         "description": "This is a description for Non-fiction Book 2.",
-        "img": "/images/nonfiction/book2.jpg",
+        "img": "/images/nonfiction/book6.jpg",
         "price": 15.99
       },
       {
         "id": 17,
-        "title": "Non-fiction Book 7",
+        "title": "Adventure PlayBook",
         "description": "This is a description for Non-fiction Book 1.",
-        "img": "/images/nonfiction/book1.jpg",
+        "img": "/images/nonfiction/book7.jpg",
         "price": 15.99
       },
       {
         "id": 18,
-        "title": "Non-fiction Book 8",
+        "title": "Sunsets with Annie",
         "description": "This is a description for Non-fiction Book 2.",
-        "img": "/images/nonfiction/book2.jpg",
+        "img": "/images/nonfiction/book8.jpg",
         "price": 15.99
       },
       {"id": 19,

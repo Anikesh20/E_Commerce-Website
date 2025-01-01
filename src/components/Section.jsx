@@ -43,15 +43,15 @@ const Section = ({ category, books }) => {
                 key={book.id}
                 className="flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4 text-center relative group"
               >
-                {/* Book Image and Description */}
+                
                 <div className="relative group">
-                  {/* Book Image */}
+                  
                   <img
                     src={book.img}
                     alt={book.title}
                     className="w-40 h-60 mx-auto object-cover rounded-lg shadow-md transition-all duration-300 ease-in-out group-hover:blur-sm"
                   />
-                  {/* Hover Overlay (opaque background with text) */}
+                 
                   <div className="absolute inset-0 bg-black bg-opacity-70 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10 rounded-3xl">
                     <h3 className="text-lg font-medium">{book.title}</h3>
                     <p className="mt-2 text-sm">{book.description}</p>
@@ -59,9 +59,9 @@ const Section = ({ category, books }) => {
                   </div>
                 </div>
 
-                {/* Add to Cart Button with Gradient Wave on Hover */}
+                
                 <button
-                  onClick={() => handleAddToCart(book)} // Add book to cart and show alert
+                  onClick={() => handleAddToCart(book)} 
                   className="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-900 text-white rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-300 relative z-10 group"
                 >
                   Add to Cart
