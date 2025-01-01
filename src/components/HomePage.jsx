@@ -13,22 +13,22 @@ import BiographyImg from '../assests/biography.jpg';
 import HistoryImg from '../assests/history.jpg';
 import SelfHelpImg from '../assests/selfhelp.jpg';
 import ChildrensImg from '../assests/childrens.jpg';
-import BGImage from '../assests/BG-IMG.jpg'; 
+import BGImage from '../assests/BG-IMG.jpg';
 
 const HomePage = () => {
   const navigate = useNavigate();
 
   const categories = [
-    { name: "Fiction", img: FictionImg },
-    { name: "nonfiction", img: NonFictionImg },
-    { name: "Mystery", img: MysteryImg },
-    { name: "Romance", img: RomanceImg },
-    { name: "Scifi", img: SciFiImg },
-    { name: "Fantasy", img: FantasyImg },
-    { name: "Biography", img: BiographyImg },
-    { name: "History", img: HistoryImg },
-    { name: "Selfhelp", img: SelfHelpImg },
-    { name: "Childrens", img: ChildrensImg },
+    { name: 'Fiction', img: FictionImg },
+    { name: 'Nonfiction', img: NonFictionImg },
+    { name: 'Mystery', img: MysteryImg },
+    { name: 'Romance', img: RomanceImg },
+    { name: 'Scifi', img: SciFiImg },
+    { name: 'Fantasy', img: FantasyImg },
+    { name: 'Biography', img: BiographyImg },
+    { name: 'History', img: HistoryImg },
+    { name: 'Selfhelp', img: SelfHelpImg },
+    { name: 'Childrens', img: ChildrensImg },
   ];
 
   const handleCategoryClick = (category) => {
@@ -36,18 +36,17 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <div
         style={{
-          backgroundImage: `url(${BGImage})`, 
+          backgroundImage: `url(${BGImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          position: 'relative',
-          height: '100vh',
         }}
+        className="flex-grow relative"
       >
-       
+        {/* Transparent Overlay */}
         <div
           style={{
             position: 'absolute',
@@ -55,17 +54,18 @@ const HomePage = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)', 
-            zIndex: -1, 
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: -1,
           }}
         ></div>
-        <div className="relative z-10">
-        
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
+
+        {/* Categories Grid */}
+        <div className="relative z-10 p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {categories.map((category) => (
               <div
                 key={category.name}
-                className="category-card p-4 bg-white rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="category-card p-4 bg-white rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 h-64"
                 onClick={() => handleCategoryClick(category.name)}
               >
                 <img
