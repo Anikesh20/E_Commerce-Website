@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
+import { FaShoppingCart } from 'react-icons/fa';
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showCategories, setShowCategories] = useState(false);
@@ -69,7 +69,9 @@ const Header = () => {
         </div>
 
         <Link to="/contact" className="hover:underline">Contact Us</Link>
-        <Link to="/cart" className="hover:underline">Cart</Link>
+        <Link to="/cart" className="hover:underline flex items-center">
+  <FaShoppingCart className="text-lg" />
+</Link>
       </nav>
 
       {/* Mobile menu button */}
