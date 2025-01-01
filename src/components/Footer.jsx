@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         background: "linear-gradient(-45deg, #6a5acd, #4b0082, #00ced1, #1e90ff, #9370db)",
         backgroundSize: "300% 300%",
         animation: "gradient-wave 10s ease infinite",
-        minHeight: '200px', 
+        minHeight: "200px",
       }}
     >
       <style>
@@ -23,6 +24,17 @@ const Footer = () => {
             100% {
               background-position: 0% 50%;
             }
+          }
+          @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+          .social-icon:hover {
+            animation: spin 3s linear;
           }
         `}
       </style>
@@ -71,14 +83,14 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-gray-600 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-blue-400">
-              <i className="fab fa-facebook"></i>
+            <a href="https://www.facebook.com/people/Anikesh-Singh/pfbid02Fo7XGuhYyUGuSt5MVFnB4WeYPsmWw6gLJuM9rtDn7R9NjsrPfTWQoJ5fgvnvNUExl/?mibextid=ZbWKwL" className="hover:text-blue-900">
+              <FaFacebook className="social-icon w-6 h-6" />
             </a>
-            <a href="#" className="hover:text-blue-400">
-              <i className="fab fa-twitter"></i>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fanikeshsingh420" className="hover:text-black">
+              <FaTwitter className="social-icon w-6 h-6" />
             </a>
-            <a href="#" className="hover:text-blue-400">
-              <i className="fab fa-instagram"></i>
+            <a href="#" className="hover:text-pink-700">
+              <FaInstagram className="social-icon w-6 h-6" />
             </a>
           </div>
 
