@@ -1,19 +1,19 @@
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const mysql = require('mysql2');
+import express from 'express';
+import { json } from 'body-parser';
+import cors from 'cors';
+import { createConnection } from 'mysql2';
 require('dotenv').config(); 
 
 // Initialize Express app
 const app = express();
 
 // Middleware setup
-app.use(bodyParser.json());
+app.use(json());
 app.use(cors()); // Enable CORS for all routes
 
 // Create MySQL database connection using environment variables
-const db = mysql.createConnection({
+const db = createConnection({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'Pass@54321',
