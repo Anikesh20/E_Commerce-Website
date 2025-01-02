@@ -58,15 +58,12 @@ const Contact = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-
       <main className="flex-grow flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 p-6">
         <div className="max-w-3xl w-full bg-white shadow-lg rounded-lg p-8">
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h1>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
-              </label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
               <input
                 type="text"
                 id="name"
@@ -79,9 +76,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
               <input
                 type="email"
                 id="email"
@@ -94,9 +89,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                Phone Number
-              </label>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
               <input
                 type="tel"
                 id="phone"
@@ -109,9 +102,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
-              </label>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
               <textarea
                 id="message"
                 rows="4"
@@ -135,15 +126,10 @@ const Contact = () => {
           </form>
 
           {/* Success and Error Messages */}
-          {successMessage && (
-            <p className="text-center text-green-500 mt-4">{successMessage}</p>
-          )}
-          {errorMessage && (
-            <p className="text-center text-red-500 mt-4">{errorMessage}</p>
-          )}
+          {successMessage && <p className="text-center text-green-500 mt-4">{successMessage}</p>}
+          {errorMessage && <p className="text-center text-red-500 mt-4">{errorMessage}</p>}
         </div>
       </main>
-
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/messages'); 
+        const response = await fetch('http://localhost:5000/api/messages');
         if (!response.ok) {
           throw new Error('Failed to fetch messages.');
         }
