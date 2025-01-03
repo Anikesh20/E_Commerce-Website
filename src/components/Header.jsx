@@ -75,7 +75,7 @@ const Header = () => {
           )}
         </div>
 
-        <Link to="/contact" className="block flex items-center hover:underline">
+        <Link to="/contact" className="flex items-center hover:underline">
         <FaEnvelope className="w-5 h-5 mr-2" /> {/* Contact icon */}
         Contact Us
       </Link>
@@ -125,7 +125,7 @@ const Header = () => {
               )}
             </li>
             <li>
-            <Link to="/contact" className="block flex items-center hover:underline">
+            <Link to="/contact" className="flex items-center hover:underline">
         <FaEnvelope className="w-5 h-5 mr-2" /> {/* Contact icon */}
         Contact Us
       </Link>
