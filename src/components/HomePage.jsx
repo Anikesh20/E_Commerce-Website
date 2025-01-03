@@ -46,7 +46,6 @@ const HomePage = () => {
         }}
         className="flex-grow relative"
       >
-       
         <div
           style={{
             position: 'absolute',
@@ -65,7 +64,7 @@ const HomePage = () => {
             {categories.map((category) => (
               <div
                 key={category.name}
-                className="category-card p-4 bg-white rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 h-64"
+                className="category-card p-4 bg-black rounded-lg shadow-md cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-300 circular hover:shadow-yellow-400"
                 onClick={() => handleCategoryClick(category.name)}
               >
                 <img
@@ -73,7 +72,7 @@ const HomePage = () => {
                   alt={category.name}
                   className="w-full h-40 object-cover rounded-lg"
                 />
-                <h3 className="text-xl text-center mt-2">{category.name}</h3>
+                <h3 className="text-xl  text-white text-center mt-2">{category.name}</h3>
               </div>
             ))}
           </div>
