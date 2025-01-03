@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assests/logo.png'; 
+import logo from '../assets/logo.png'; 
 
 const AdminPage = () => {
   const [adminId, setAdminId] = useState('');

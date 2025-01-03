@@ -3,17 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
-import FictionImg from '../assests/fiction.webp';
-import NonFictionImg from '../assests/nonfiction.jpg';
-import MysteryImg from '../assests/mystery.jpg';
-import RomanceImg from '../assests/romance.jpg';
-import SciFiImg from '../assests/scifi.jpg';
-import FantasyImg from '../assests/fantasy.jpg';
-import BiographyImg from '../assests/biography.jpg';
-import HistoryImg from '../assests/history.jpg';
-import SelfHelpImg from '../assests/selfhelp.jpg';
-import ChildrensImg from '../assests/childrens.jpg';
-import BGImage from '../assests/BG-IMG.jpg';
+import FictionImg from '../assets/fiction.webp';
+import NonFictionImg from '../assets/nonfiction.jpg';
+import MysteryImg from '../assets/mystery.jpg';
+import RomanceImg from '../assets/romance.jpg';
+import SciFiImg from '../assets/scifi.jpg';
+import FantasyImg from '../assets/fantasy.jpg';
+import BiographyImg from '../assets/biography.jpg';
+import HistoryImg from '../assets/history.jpg';
+import SelfHelpImg from '../assets/selfhelp.jpg';
+import ChildrensImg from '../assets/childrens.jpg';
+import BGImage from '../assets/BG-IMG.jpg';
 
 const HomePage = () => {
   const navigate = useNavigate();
