@@ -5,20 +5,22 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { FaHome } from "react-icons/fa"; 
 import { FaEnvelope } from "react-icons/fa";
 import { FaTags } from "react-icons/fa"; 
+import logo from '../assets/logo.png';  
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showCategories, setShowCategories] = useState(false);
 
   const categories = [
     "Fiction",
-    "nonfiction",
+    "Nonfiction",
     "Mystery",
     "Romance",
-    "scifi",
+    "Sci-Fi",
     "Fantasy",
     "Biography",
     "History",
-    "selfhelp",
+    "Selfhelp",
     "Childrens",
   ];
 
@@ -38,34 +40,54 @@ const Header = () => {
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
           }
+
+          .headerLogo {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+          }
+
+          .headerLogo:hover {
+            box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.7), 0 0 20px 5px rgba(255, 0, 0, 0.5);
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffc00, #00ff00, #007bff);
+            background-size: 300%;
+            animation: gradientRing 2s ease infinite;
+          }
+
+          @keyframes gradientRing {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
         `}
       </style>
-      <h1 className="text-2xl font-bold">BookStore</h1>
+
+      
+      <img
+        src={logo}
+        alt="BookStore"
+        className="headerLogo"
+      />
 
       <nav className="hidden md:flex space-x-6 relative">
-        
         <Link to="/" className="flex items-center hover:underline">
-      <FaHome className="w-5 h-5 mr-2" /> 
-      Home
-    </Link>
+          <FaHome className="w-5 h-5 mr-2" /> 
+          Home
+        </Link>
 
         <div className="relative">
-        <button
-  className="w-full text-left flex items-center hover:underline"
-  onClick={() => setShowCategories((prev) => !prev)}
->
-  <FaTags className="w-5 h-5 mr-2" /> {/* Icon */}
-  Categories
-</button>
+          <button
+            className="w-full text-left flex items-center hover:underline"
+            onClick={() => setShowCategories((prev) => !prev)}
+          >
+            <FaTags className="w-5 h-5 mr-2" />
+            Categories
+          </button>
           {showCategories && (
-            <ul
-              className="absolute left-0 top-full bg-white text-black shadow-lg rounded-md w-48 py-2 z-50"
-            >
+            <ul className="absolute left-0 top-full bg-white text-black shadow-lg rounded-md w-48 py-2 z-50">
               {categories.map((category) => (
-                <li
-                  key={category}
-                  className="px-4 py-2 hover:bg-purple-100 cursor-pointer"
-                >
+                <li key={category} className="px-4 py-2 hover:bg-purple-100 cursor-pointer">
                   <Link to={`/category/${category.toLowerCase().replace(' ', '-')}`}>
                     {category}
                   </Link>
@@ -76,13 +98,13 @@ const Header = () => {
         </div>
 
         <Link to="/contact" className="flex items-center hover:underline">
-        <FaEnvelope className="w-5 h-5 mr-2" /> {/* Contact icon */}
-        Contact Us
-      </Link>
+          <FaEnvelope className="w-5 h-5 mr-2" />
+          Contact Us
+        </Link>
         <Link to="/cart" className="hover:underline flex items-center">
-  <FaShoppingCart className="text-lg" />
-  Cart
-</Link>
+          <FaShoppingCart className="text-lg" />
+          Cart
+        </Link>
       </nav>
 
       {/* Mobile menu button */}
@@ -98,20 +120,19 @@ const Header = () => {
         <div className="absolute top-16 left-0 w-full bg-white text-blue-600 shadow-md z-50">
           <ul className="flex flex-col p-4 space-y-2">
             <li>
-            <Link to="/" className="flex items-center hover:underline">
-      <FaHome className="w-5 h-5 mr-2" /> 
-      Home
-    </Link>
-           {/*   <Link to="/admin" className="hover:underline">Admin Panel</Link> */}
+              <Link to="/" className="flex items-center hover:underline">
+                <FaHome className="w-5 h-5 mr-2" /> 
+                Home
+              </Link>
             </li>
             <li>
-            <button
-  className="w-full text-left flex items-center hover:underline"
-  onClick={() => setShowCategories((prev) => !prev)}
->
-  <FaTags className="w-5 h-5 mr-2" /> {/* Icon */}
-  Categories
-</button>
+              <button
+                className="w-full text-left flex items-center hover:underline"
+                onClick={() => setShowCategories((prev) => !prev)}
+              >
+                <FaTags className="w-5 h-5 mr-2" />
+                Categories
+              </button>
               {showCategories && (
                 <ul className="pl-4">
                   {categories.map((category) => (
@@ -125,16 +146,16 @@ const Header = () => {
               )}
             </li>
             <li>
-            <Link to="/contact" className="flex items-center hover:underline">
-        <FaEnvelope className="w-5 h-5 mr-2" /> {/* Contact icon */}
-        Contact Us
-      </Link>
+              <Link to="/contact" className="flex items-center hover:underline">
+                <FaEnvelope className="w-5 h-5 mr-2" />
+                Contact Us
+              </Link>
             </li>
             <li>
-            <Link to="/cart" className="hover:underline flex items-center">
-  <FaShoppingCart className="text-lg" />
-  Cart
-</Link>
+              <Link to="/cart" className="hover:underline flex items-center">
+                <FaShoppingCart className="text-lg" />
+                Cart
+              </Link>
             </li>
           </ul>
         </div>
