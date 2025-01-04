@@ -13,7 +13,7 @@ const app = express();
 app.use(json());
 app.use(cors()); // Enable CORS for all routes
 
-// Create MySQL database connection using environment variables
+
 const db = createConnection({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
@@ -136,7 +136,7 @@ app.post('/api/login', (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 5000; //port 5000
+const PORT = process.env.PORT || 5000; 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
