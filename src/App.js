@@ -10,9 +10,10 @@ const AdminDashboard = React.lazy(() => import('./components/AdminDashboard'));
 const Contact = React.lazy(() => import('./components/Contact'));
 const NotFound = React.lazy(() => import('./components/NotFound'));
 const CartPage = React.lazy(() => import('./components/CartPage'));
+const SignupLoginPage = React.lazy(() => import('./components/SignupLoginPage')); // Add this import
 
 // Simulated authentication status
-const isAuthenticated = true;
+const isAuthenticated = false; // Example; set to true when user is logged in
 
 // Wrapper for protected routes
 const ProtectedRoute = ({ children }) => {
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/category/:category" element={<CategoryPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/signup-login" element={<SignupLoginPage />} /> {/* Add the Signup/Login route */}
 
             {/* Protected Routes */}
             <Route

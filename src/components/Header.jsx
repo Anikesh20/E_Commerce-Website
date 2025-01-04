@@ -41,20 +41,7 @@ const Header = () => {
             100% { background-position: 0% 50%; }
           }
 
-          .headerLogo {
-            height: 3rem;
-            width: 3rem;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-          }
-
-          .headerLogo:hover {
-            box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.7), 0 0 20px 5px rgba(255, 0, 0, 0.5);
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffc00, #00ff00, #007bff);
-            background-size: 300%;
-            animation: gradientRing 2s ease infinite;
-          }
-
+        
           @keyframes gradientRing {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -65,10 +52,12 @@ const Header = () => {
 
       
       <img
-        src={logo}
-        alt="BookStore"
-        className="headerLogo"
-      />
+  src={logo}
+  alt="BookStore"
+  className="h-12 w-12 rounded-full transition-all duration-300 ease-in-out hover:shadow-[0_0_10px_3px_rgba(255,0,0,0.7),0_0_20px_5px_rgba(255,0,0,0.5)] hover:bg-gradient-to-r hover:from-red-500 hover:via-orange-400 hover:to-yellow-300 hover:bg-[length:300%_300%] hover:animate-[gradientRing_2s_ease_infinite]"
+/>
+
+
 
       <nav className="hidden md:flex space-x-6 relative">
         <Link to="/" className="flex items-center hover:underline">

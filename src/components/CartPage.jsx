@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import Header from './Header';
 import Footer from './Footer';
@@ -47,17 +48,18 @@ const CartPage = () => {
         )}
 
         {cart.length > 0 && (
-          <div className="mt-8 flex justify-end">
-            <div className="bg-blue-500 text-white p-4 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold">
-                Total: Rs.{' '}
-                {cart.reduce((acc, book) => acc + book.price, 0).toFixed(2)}
-              </h3>
-              <button className="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-800">
-                Checkout
-              </button>
-            </div>
+          <div className="mt-8 flex justify-end items-end">  
+          <div className="bg-blue-500 text-white p-4 rounded-lg shadow-md flex flex-col items-center">  
+            <h3 className="text-xl font-semibold">
+              Total: Rs.{' '}
+              {cart.reduce((acc, book) => acc + book.price, 0).toFixed(2)}
+            </h3>
+            <Link to="/signup-login" className="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-800">
+              Checkout
+            </Link>
           </div>
+        </div>
+        
         )}
       </main>
       <Footer />
