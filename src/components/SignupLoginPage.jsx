@@ -62,7 +62,7 @@ const SignupLoginPage = () => {
         if (response.ok) {
           console.log('User logged in:', data);
           localStorage.setItem('token', data.token); 
-          navigate('/dashboard'); 
+          navigate('/cart'); 
         } else {
           setErrorMessage(data.message || 'Invalid email or password.');
           setSuccessMessage(''); 
