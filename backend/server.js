@@ -9,6 +9,7 @@ require('dotenv').config();
 // Initialize Express app
 const app = express();
 
+
 // Middleware setup
 app.use(json());
 app.use(cors()); // Enable CORS for all routes
