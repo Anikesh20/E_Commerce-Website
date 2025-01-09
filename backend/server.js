@@ -49,7 +49,8 @@ app.post('/api/messages', (req, res) => {
 });
 
 // Route for fetching messages (GET)
-app.get('/api/messages', (req, res) => {
+// eslint-disable-next-line no-use-before-define
+app.get('/api/messages', verifyToken, (req, res) => {
   const sql = 'SELECT * FROM messages ORDER BY created_at DESC';
 
   db.query(sql, (err, results) => {
