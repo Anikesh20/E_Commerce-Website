@@ -103,7 +103,7 @@ app.post('/api/signup', async (req, res) => {
   }
 });
 
-// Route for user login
+// Routing for user login
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
 
