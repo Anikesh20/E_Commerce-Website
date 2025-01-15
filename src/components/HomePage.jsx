@@ -64,7 +64,7 @@ const HomePage = () => {
             {categories.map((category) => (
               <div
                 key={category.name}
-                className="category-card p-4 bg-black rounded-lg shadow-md cursor-pointer hover:scale-105 transition-all duration-300 hover:shadow-[0_0_10px_3px_white,0_0_20px_5px_white,0_0_30px_10px_yellow]"
+                className="category-card p-4 bg-black rounded-lg shadow-md cursor-pointer hover:scale-105 transition-all duration-300 hover:shadow-[0_0_10px_3px_white,0_0_20px_5px_purple,0_0_30px_10px_white]"
 
                 onClick={() => handleCategoryClick(category.name)}
               >
