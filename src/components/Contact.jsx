@@ -125,7 +125,7 @@ const Contact = () => {
             </div>
           </form>
 
-          {/* Success and Error Messages */}
+          
           {successMessage && <p className="text-center text-green-500 mt-4">{successMessage}</p>}
           {errorMessage && <p className="text-center text-red-500 mt-4">{errorMessage}</p>}
         </div>

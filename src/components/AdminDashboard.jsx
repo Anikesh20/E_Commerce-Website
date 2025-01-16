@@ -26,13 +26,13 @@ const AdminDashboard = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col items-center">
-      {/* Header Section */}
+      
       <div className="w-full p-8 bg-indigo-600 text-white text-center">
         <h1 className="text-3xl font-bold">Admin Dashboard</h1>
         <p className="mt-4">Welcome to the Admin Dashboard!</p>
       </div>
 
-      {/* Table Section */}
+      
       <div className="w-full p-8">
         <h2 className="text-2xl font-semibold text-center mb-6">Received Messages</h2>
 

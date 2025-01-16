@@ -96,7 +96,7 @@ const Header = () => {
         </Link>
       </nav>
 
-      {/* Mobile menu button */}
+      
       <button
         className="md:hidden text-white"
         onClick={() => setShowMenu(!showMenu)}
@@ -104,7 +104,7 @@ const Header = () => {
         {showMenu ? <FaTimes size={30} /> : <FaBars size={30} />}
       </button>
 
-      {/* Mobile menu */}
+      
       {showMenu && (
         <div className="absolute top-16 left-0 w-full bg-white text-blue-600 shadow-md z-50">
           <ul className="flex flex-col p-4 space-y-2">

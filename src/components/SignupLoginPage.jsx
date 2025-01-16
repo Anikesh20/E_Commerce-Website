@@ -15,7 +15,7 @@ const SignupLoginPage = () => {
     e.preventDefault();
 
     if (isSignup) {
-      // Signup Logic: Send data to the backend
+      
       if (username && email && password) {
         try {
           const response = await fetch('http://localhost:5000/api/signup', {
@@ -32,10 +32,10 @@ const SignupLoginPage = () => {
             console.log('User signed up:', data);
             setErrorMessage('');
             setSuccessMessage('User data saved successfully!'); 
-            setIsSignup(false); // Switch to login after signup
+            setIsSignup(false); 
           } else {
             setErrorMessage(data.message || 'Error during signup');
-            setSuccessMessage(''); // Clear success message if there's an error
+            setSuccessMessage(''); 
           }
         } catch (error) {
           console.error('Error during signup:', error);
@@ -127,14 +127,14 @@ const SignupLoginPage = () => {
           {isSignup ? 'Sign Up' : 'Log In'}
         </h2>
 
-        {/* Display Success Message */}
+        
         {successMessage && (
           <div className="bg-green-100 text-green-600 border border-green-400 p-2 mb-4 rounded-md">
             {successMessage}
           </div>
         )}
 
-        {/* Display Error Message */}
+       
         {errorMessage && (
           <div className="bg-red-100 text-red-600 border border-red-400 p-2 mb-4 rounded-md">
             {errorMessage}
